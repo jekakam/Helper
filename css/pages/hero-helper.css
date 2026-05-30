@@ -1,0 +1,142 @@
+/* css/pages/hero-helper.css */
+.page-hero-helper .helper-container {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.page-hero-helper .battle-info {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    color: white;
+    border-radius: 16px;
+    padding: 20px;
+    margin-bottom: 24px;
+}
+
+.page-hero-helper .building-card {
+    background: white;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.page-hero-helper .building-header {
+    background: #c8d4d8;
+    padding: 12px 16px;
+    font-weight: 600;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.page-hero-helper .battle-row {
+    padding: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 16px;
+    border-bottom: 1px solid #eee;
+}
+
+.page-hero-helper .vs {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #6c757d;
+    min-width: 60px;
+    text-align: center;
+}
+
+.page-hero-helper .enemy {
+    text-align: right;
+    flex: 1;
+}
+
+.page-hero-helper .our {
+    text-align: left;
+    flex: 1;
+}
+
+.page-hero-helper .player-name {
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+.page-hero-helper .player-power {
+    font-size: 0.8rem;
+    color: #6c757d;
+}
+
+.page-hero-helper .hero-mini {
+    width: 32px;
+    height: 32px;
+    object-fit: cover;
+    border-radius: 6px;
+    margin-right: 4px;
+}
+
+.page-hero-helper .hero-combo {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    align-items: center;
+    margin-top: 6px;
+}
+
+.page-hero-helper .enemy .hero-combo {
+    justify-content: flex-end;
+}
+
+.page-hero-helper .our .hero-combo {
+    justify-content: flex-start;
+}
+
+.page-hero-helper .recommend-block {
+    background: #d4edda;
+    border-radius: 10px;
+    padding: 12px;
+    margin-top: 8px;
+}
+
+.page-hero-helper .warning-block {
+    background: #f8d7da;
+    border-radius: 10px;
+    padding: 12px;
+    margin-top: 8px;
+}
+
+.page-hero-helper .found-badge {
+    background: #28a745;
+    color: white;
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-size: 0.7rem;
+    display: inline-block;
+    margin-bottom: 8px;
+}
+
+.page-hero-helper .counter-player {
+    background: white;
+    border-radius: 8px;
+    padding: 8px 12px;
+    margin-bottom: 8px;
+}
+
+/* Мобильная версия */
+@media (max-width: 768px) {
+    .page-hero-helper .battle-row {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .page-hero-helper .enemy,
+    .page-hero-helper .our {
+        text-align: center;
+    }
+
+    .page-hero-helper .hero-combo {
+        justify-content: center !important;
+    }
+}

@@ -1,0 +1,245 @@
+/* css/pages/stats.css */
+.page-stats .stats-container {
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+.page-stats .stats-tabs {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-bottom: 24px;
+    border-bottom: 2px solid #e0e0e0;
+    padding-bottom: 8px;
+}
+
+.page-stats .tab-btn {
+    background: none;
+    border: none;
+    padding: 8px 24px;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #666;
+    cursor: pointer;
+    border-radius: 30px;
+    transition: all 0.2s;
+}
+
+.page-stats .tab-btn:hover {
+    background: #f0f0f0;
+}
+
+.page-stats .tab-btn.active {
+    background: #1a1a2e;
+    color: #fff;
+}
+
+.page-stats .tab-content {
+    display: none;
+}
+
+.page-stats .tab-content.active {
+    display: block;
+}
+
+.page-stats .stats-card {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    margin-bottom: 24px;
+}
+
+.page-stats .card-header-stats {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    color: #fff;
+    padding: 16px 20px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.page-stats .card-header-stats i {
+    font-size: 1.4rem;
+}
+
+.page-stats .card-header-stats h3 {
+    margin: 0;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.page-stats .card-body-stats {
+    padding: 20px;
+    overflow-x: auto;
+}
+
+.page-stats .stats-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.85rem;
+}
+
+.page-stats .stats-table th {
+    text-align: left;
+    padding: 12px 8px;
+    background: #f8f9fa;
+    border-bottom: 2px solid #e0e0e0;
+    font-weight: 600;
+}
+
+.page-stats .stats-table td {
+    padding: 10px 8px;
+    border-bottom: 1px solid #f0f0f0;
+    vertical-align: middle;
+}
+
+.page-stats .stats-table tr:hover {
+    background: #f8f9fa;
+}
+
+.page-stats .sortable {
+    cursor: pointer;
+    user-select: none;
+}
+
+.page-stats .sortable:hover {
+    background: #e9ecef;
+}
+
+.page-stats .sortable i {
+    margin-left: 5px;
+    opacity: 0.5;
+}
+
+.page-stats .sortable.active i {
+    opacity: 1;
+}
+
+.page-stats .win-rate-high {
+    background: #28a745;
+    color: #fff;
+    padding: 2px 8px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    display: inline-block;
+}
+
+.page-stats .win-rate-mid {
+    background: #ffc107;
+    color: #333;
+    padding: 2px 8px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    display: inline-block;
+}
+
+.page-stats .win-rate-low {
+    background: #dc3545;
+    color: #fff;
+    padding: 2px 8px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    display: inline-block;
+}
+
+.page-stats .trend-up {
+    color: #28a745;
+    font-weight: 600;
+}
+
+.page-stats .combo-heroes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    align-items: center;
+}
+
+.page-stats .hero-mini {
+    width: 32px;
+    height: 32px;
+    object-fit: cover;
+    border-radius: 6px;
+    background: #e9ecef;
+}
+
+.page-stats .titan-color {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    margin-right: 6px;
+    vertical-align: middle;
+}
+
+.page-stats .chart-icon {
+    cursor: pointer;
+    font-size: 1.3rem;
+    color: #4a90e2;
+    transition: transform 0.2s;
+}
+
+.page-stats .chart-icon:hover {
+    transform: scale(1.1);
+    color: #ffc107;
+}
+
+.page-stats .modal-chart {
+    width: 90%;
+    max-width: 700px;
+}
+
+.page-stats .chart-container {
+    position: relative;
+    height: 400px;
+    margin: 20px 0;
+}
+
+.page-stats .weekly-stats {
+    margin-top: 20px;
+    font-size: 0.85rem;
+    color: #666;
+}
+
+.page-stats .weekly-stats span {
+    display: inline-block;
+    margin-right: 15px;
+    margin-bottom: 5px;
+}
+
+.page-stats .loading-placeholder {
+    text-align: center;
+    padding: 40px;
+    color: #999;
+}
+
+.page-stats .empty-placeholder {
+    text-align: center;
+    padding: 30px;
+    color: #999;
+}
+
+/* Адаптив */
+@media (max-width: 768px) {
+    .page-stats .card-body-stats {
+        padding: 12px;
+    }
+
+    .page-stats .stats-table {
+        font-size: 0.7rem;
+    }
+
+    .page-stats .hero-mini {
+        width: 24px;
+        height: 24px;
+    }
+
+    .page-stats .tab-btn {
+        padding: 6px 16px;
+        font-size: 0.85rem;
+    }
+
+    .page-stats .chart-container {
+        height: 280px;
+    }
+}

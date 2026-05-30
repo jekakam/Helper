@@ -1,0 +1,230 @@
+/* css/pages/battle.css */
+.page-battle .battle-edit-container {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.page-battle .battle-header {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    color: white;
+    border-radius: 12px;
+    padding: 15px 20px;
+    margin-bottom: 25px;
+}
+
+.page-battle .building-card {
+    background: white;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+
+.page-battle .building-header {
+    background: #c8d4d8;
+    padding: 8px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+.page-battle .battle-row {
+    display: flex;
+    align-items: flex-start;
+    padding: 5px;
+    gap: 5px;
+}
+
+.page-battle .col-left {
+    flex: 1;
+}
+
+.page-battle .col-left .heroes-edit {
+    justify-content: flex-end;
+}
+
+.page-battle .col-center {
+    text-align: center;
+    flex-shrink: 0;
+}
+
+.page-battle .col-right {
+    flex: 1;
+}
+
+.page-battle .battle-item:nth-child(even) {
+    background-color: #ededed;
+}
+
+.page-battle .battle-item:nth-child(odd) {
+    background-color: #ffffff;
+}
+
+.page-battle .player-group-left,
+.page-battle .player-group-right {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.page-battle .player-group-left {
+    justify-content: flex-end;
+}
+
+.page-battle .player-group-right {
+    justify-content: flex-start;
+}
+
+.page-battle .enemy-select,
+.page-battle .our-select,
+.page-battle .result-select,
+.page-battle .titan-select {
+    padding: 5px 8px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 0.85rem;
+}
+
+.page-battle .enemy-power,
+.page-battle .our-power {
+    width: 80px;
+    padding: 5px 8px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    text-align: center;
+    height: 32px;
+}
+
+.page-battle .heroes-edit {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    align-items: center;
+    margin-top: 8px;
+}
+
+.page-battle .hero-thumb {
+    width: 32px;
+    height: 32px;
+    object-fit: cover;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.page-battle .hero-thumb-placeholder {
+    width: 32px;
+    height: 32px;
+    background: #6c757d;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.page-battle .comment-row {
+    padding: 5px;
+}
+
+.page-battle .edit-comment {
+    width: 100%;
+    padding: 8px 10px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    resize: vertical;
+}
+
+.page-battle .draft-warning {
+    background: #fff3cd;
+    border: 1px solid #ffecb5;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.page-battle .draft-warning i {
+    font-size: 48px;
+    color: #ff0760;
+    margin-bottom: 10px;
+}
+
+.page-battle [data-is-titan="true"] + .comment-row {display: none;}
+
+
+
+/* Мобильная версия */
+@media (max-width: 767px) {
+    .page-battle * {
+        font-size: small;
+    }
+
+    .page-battle .battle-row {
+        flex-direction: row;
+        align-items: stretch;
+    }
+
+    .page-battle .col-left,
+    .page-battle .col-right {
+        padding: 0;
+    }
+
+    .page-battle .col-center {
+        width: auto;
+    }
+
+    .page-battle .heroes-edit {
+        justify-content: center !important;
+    }
+
+    .page-battle select.result-select {
+        width: 80px;
+        font-size: 12px;
+    }
+
+    .page-battle [data-is-titan="false"].battle-row {
+        flex-direction: column;
+    }
+
+    .page-battle [data-is-titan="false"] .player-group-left,
+    .page-battle [data-is-titan="false"] .player-group-right {
+        justify-content: center;
+    }
+
+    .page-battle [data-is-titan="true"] .player-group-left,
+    .page-battle [data-is-titan="true"] .player-group-right {
+        flex-direction: column;
+    }
+
+    .page-battle [data-is-titan="true"] .player-group-right .titan-select {
+        order: 3;
+    }
+
+    .page-battle [data-is-titan="true"] .player-group-right input {
+        order: 2;
+    }
+
+    .page-battle [data-is-titan="true"] .player-group-right .our-select {
+        order: 1;
+    }
+
+    .page-battle [data-is-titan="true"] .player-group-left {
+        align-items: flex-end;
+    }
+
+    .page-battle [data-is-titan="true"] .player-group-right {
+        align-items: flex-start;
+    }
+}
+
+@media (max-width: 475px) {
+    .page-battle .enemy-select,
+    .page-battle .our-select {
+        max-width: 99px;
+    }
+}

@@ -1,0 +1,35 @@
+.page-guilds { background: var(--gray-light); }
+.page-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem; }
+.player-search-section { background: var(--card-bg); border-radius: var(--border-radius-card); padding: 1.25rem; margin-bottom: 2rem; box-shadow: var(--box-shadow); }
+.search-input-group { display: flex; gap: 0.5rem; margin-bottom: 1rem; }
+.form-control-custom { flex: 1; padding: 0.5rem 0.75rem; border: 1px solid var(--gray-border); border-radius: var(--border-radius-sm); }
+.form-control-custom:focus { outline: none; border-color: var(--info); }
+.btn { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.4rem 1rem; border-radius: var(--border-radius-sm); font-size: 0.875rem; cursor: pointer; border: none; }
+.btn-primary-custom { background: var(--btn-primary-bg); color: var(--text-white); }
+.btn-primary-custom:hover { background: var(--btn-primary-hover); }
+.btn-warning-custom { background: var(--btn-warning-bg); color: var(--btn-warning-text); }
+.btn-warning-custom:hover { background: var(--btn-warning-hover); }
+.btn-info-custom { background: var(--btn-info-bg); color: var(--text-white); }
+.btn-info-custom:hover { background: var(--btn-info-hover); }
+.btn-secondary-custom { background: var(--btn-secondary-bg); color: var(--text-white); }
+.btn-secondary-custom:hover { background: var(--btn-secondary-hover); }
+.player-search-results { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 0.75rem; margin-top: 1rem; }
+.player-result-card { background: var(--section-bg); border-radius: var(--border-radius-sm); padding: 0.5rem 0.75rem; display: flex; align-items: center; gap: 0.75rem; }
+.player-result-avatar { width: 32px; height: 32px; background: var(--card-bg); border-radius: 50%; display: flex; align-items: center; justify-content: center; }
+.guilds-grid-container { background: var(--card-bg); border-radius: var(--border-radius-card); overflow: hidden; box-shadow: var(--box-shadow); }
+.guilds-grid-header, .guild-row { display: grid; grid-template-columns: 80px 1fr 180px; gap: 0; align-items: center; }
+.guilds-grid-header { background: var(--guild-header-bg); font-weight: 600; border-bottom: 2px solid var(--gray-border); }
+.grid-cell { padding: 6px 18px; }
+.guilds-grid-body { display: flex; flex-direction: column; }
+.guild-row { border-bottom: 1px solid var(--gray-border); transition: var(--transition-default); }
+.guild-row:hover { background: var(--guild-row-hover-bg); }
+.guild-actions { display: flex; gap: 8px; }
+.loading-placeholder, .empty-placeholder { text-align: center; padding: 2rem; color: var(--empty-text); }
+.modal-content { border-radius: var(--modal-border-radius); }
+.btn-close-custom { background: none; border: none; font-size: 1.5rem; cursor: pointer; }
+.form-label-custom { font-weight: 500; margin-bottom: 0.3rem; display: inline-block; }
+
+@media (max-width: 575px) { 
+	.guilds-grid-header, .guild-row { grid-template-columns: 30px 1fr 120px; } 
+	.grid-cell { padding: 6px; }
+}

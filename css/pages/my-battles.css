@@ -1,0 +1,148 @@
+
+.battlefield-grid {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    border-radius: 16px;
+    padding: 20px;
+}
+
+.grid-row {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 8px;
+    margin-bottom: 8px;
+}
+
+.grid-cell {
+    min-height: 100px;
+    border-radius: 8px;
+}
+
+.grid-cell.empty {
+    background: transparent;
+    min-height: auto;
+}
+
+.grid-cell.vs {
+    background: rgba(255,255,255,0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 24px;
+    color: white;
+}
+
+.hero-slot {
+    background: rgba(255,255,255,0.1);
+    cursor: pointer;
+    transition: all 0.2s;
+    padding: 8px;
+}
+
+.hero-slot:hover {
+    background: rgba(255,255,255,0.2);
+}
+
+.hero-placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    color: #aaa;
+    font-size: 12px;
+}
+
+.hero-placeholder i {
+    margin-right: 4px;
+}
+
+.hero-filled {
+    text-align: center;
+}
+
+.hero-filled img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 4px;
+}
+
+.hero-filled .hero-name {
+    font-size: 11px;
+    color: white;
+    font-weight: bold;
+}
+
+.hero-filled .edit-icon {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    font-size: 12px;
+    color: #ffc107;
+    cursor: pointer;
+}
+
+.hero-stats {
+    display: flex;
+    gap: 4px;
+    margin-top: 8px;
+    flex-wrap: wrap;
+    border-top: 1px solid rgba(255,255,255,0.2);
+    padding-top: 8px;
+}
+
+.hero-stats input {
+    width: 45px;
+    padding: 3px;
+    font-size: 10px;
+    text-align: center;
+    border-radius: 4px;
+    border: none;
+}
+
+.hero-option {
+    background: #f8f9fa;
+    border-radius: 8px;
+    padding: 8px;
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.2s;
+}
+
+.hero-option:hover {
+    background: #e9ecef;
+    transform: scale(1.02);
+}
+
+.hero-option img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 4px;
+}
+
+.hero-option span {
+    display: block;
+    font-size: 11px;
+}
+
+.battle-history-item {
+    border-left: 4px solid;
+    padding: 8px;
+    margin-bottom: 8px;
+    border-radius: 6px;
+    font-size: 12px;
+}
+
+.win-border { border-left-color: #28a745; background: #f0fff0; }
+.loss-border { border-left-color: #dc3545; background: #fff0f0; }
+.hero-mini { width: 24px; height: 24px; object-fit: cover; border-radius: 4px; }
+
+@media (max-width: 768px) {
+    .grid-row { gap: 4px; }
+    .hero-stats input { width: 38px; }
+    .hero-filled img { width: 35px; height: 35px; }
+    .grid-cell { min-height: 70px; }
+}

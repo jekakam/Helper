@@ -1,0 +1,164 @@
+/* css/pages/index.css */
+.battles-header {
+    display: grid;
+    grid-template-columns: 100px 1fr 100px 1fr 60px;
+    background: #f8f9fa;
+    padding: 12px 15px;
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: 0.85rem;
+    margin-bottom: 10px;
+    border: 1px solid #e0e0e0;
+}
+
+.battles-row {
+    display: grid;
+    grid-template-columns: 100px 1fr 100px 1fr 60px;
+    padding: 7px;
+    align-items: center;
+    transition: background 0.2s;
+    gap: 5px;
+    justify-items: start;
+}
+
+.battles-row:nth-child(even) {
+    background-color: #f8f9fa;
+}
+
+.battles-row:nth-child(odd) {
+    background-color: #ffffff;
+}
+
+.battles-row:hover {
+    background: #e9ecef;
+}
+
+.battle-date {
+    font-size: 0.85rem;
+}
+
+.battle-enemy {
+    font-weight: 500;
+}
+
+.battle-score {
+    font-weight: 600;
+}
+
+.score-win {
+    color: #28a745;
+}
+
+.score-loss {
+    color: #dc3545;
+}
+
+.score-draw {
+    color: #6c757d;
+}
+
+.battles-row div {
+    display: inline-flex;
+    gap: 5px;
+    align-items: center;
+}
+
+.badge-draft {
+    background: #ffc107;
+    color: #000;
+    padding: 2px 8px;
+    border-radius: 20px;
+    font-size: 0.7rem;
+    display: inline-block;
+    width: fit-content;
+}
+
+.btn-sm-custom {
+    padding: 4px 8px;
+    font-size: 0.75rem;
+    border-radius: 6px;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.filter-bar {
+    background: #f8f9fa;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #e0e0e0;
+}
+
+.load-more-btn {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.loading-spinner {
+    display: none;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Мобильная версия */
+@media (max-width: 767px) {
+    .battles-header {
+        display: none;
+    }
+
+    .battles-row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding: 10px;
+        border: 1px solid #e0e0e0;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        gap: 8px;
+    }
+
+    .battles-row > div {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        align-items: center;
+    }
+
+    .battles-row > div:before {
+        content: attr(data-label);
+        font-weight: 600;
+        color: #6c757d;
+        font-size: 0.75rem;
+    }
+
+    .battles-row > div:last-child {
+        grid-column: span 2;
+        justify-content: flex-end;
+    }
+
+    .battles-row > div:last-child:before {
+        content: '';
+        display: none;
+    }
+
+    .battle-actions {
+        display: flex;
+        gap: 8px;
+        justify-content: flex-end;
+    }
+
+    .btn-sm-custom {
+        padding: 4px 8px;
+        font-size: 0.7rem;
+    }
+
+    .battle-actions-mobile-label {
+        display: inline;
+        margin-left: 4px;
+    }
+}
+
+@media (min-width: 768px) {
+    .battle-actions-mobile-label {
+        display: none;
+    }
+}

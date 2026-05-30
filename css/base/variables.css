@@ -1,0 +1,41 @@
+/* css/base/variables.css */
+:root {
+    --primary-gradient: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    
+    --danger: #dc3545;
+    --success: #28a745;
+    --warning: #ffc107;
+    --info: #0d6efd;
+    
+    --gray-light: #e1e1e1;
+    --gray-border: #e0e0e0;
+    --gray-dark: #6c757d;
+    --gray-hover: #f1f3f5;
+    
+    --border-radius-card: 12px;
+    --border-radius-sm: 8px;
+    
+    --box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    
+    /* Цвета текста */
+    --text-primary: #1e2a3a;
+    --text-muted: #6c757d;
+    --text-white: #ffffff;
+    
+    /* Фоны кнопок */
+    --btn-primary-bg: var(--info);
+    --btn-primary-hover: #0b5ed7;
+    --btn-warning-bg: var(--warning);
+    --btn-warning-hover: #ffca2c;
+    --btn-info-bg: #17a2b8;
+    --btn-info-hover: #138496;
+    --btn-secondary-bg: var(--gray-dark);
+    --btn-secondary-hover: #5c636a;
+    
+    /* Фоны карточек/секций */
+    --card-bg: #ffffff;
+    --section-bg: var(--gray-light);
+    
+    /* Дополнительно */
+    --transition-default: none;  /* отключаем трансформации */
+}

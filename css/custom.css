@@ -1,0 +1,189 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    /*min-height: 100vh;*/
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+footer {
+    flex-shrink: 0;
+}
+
+
+
+/* ТИТАНЫ */
+.element-color-circle {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid #ddd;
+}
+
+
+/* ГЕРОИ */
+.hero-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 8px;
+    object-fit: cover;
+    background-color: #6c757d;
+}
+
+.hero-preview {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+}
+
+.hero-checkbox-item.selected-hero {
+    background: #d4edda;
+    border-color: #28a745;
+}
+
+
+.hero-thumb { width: 32px; height: 32px; object-fit: cover; border-radius: 4px; margin-right: 4px; }
+.composition { display: flex; flex-wrap: wrap; gap: 4px; align-items: center; min-height: 40px; }
+.table-bordered th, .table-bordered td { vertical-align: middle; }
+.badge { display: inline-block; padding: 4px 8px; border-radius: 4px; color: white; }
+.hero-checkbox-list { display: grid; grid-template-columns: repeat(4, 1fr); gap: 5px; max-height:500px; overflow-y: auto; }
+.hero-checkbox-item { display: flex; align-items: center; gap: 8px; padding: 5px; border: 1px solid #ddd; border-radius: 4px; background: #f9f9f9; }
+.hero-checkbox-item img { max-width:100px;object-fit: cover; border-radius: 4px; }
+
+
+
+
+@media (max-width: 767px) {
+    .element-color-circle {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+
+@media (max-width: 424px) {
+    .card  .action {
+		display: flex;
+		flex-direction: column;
+		gap: 6px;
+	}
+}
+
+
+
+
+
+/************************
+Page: titan_helper.php
+************************/
+.titan-helper .battle-info { background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); color: white; border-radius: 16px; padding: 20px; margin-bottom: 24px; }
+.titan-helper .building-card { background: white; border-radius: 12px; margin-bottom: 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); overflow: hidden; }
+.titan-helper .building-header { background: #c8d4d8; padding: 12px 16px; font-weight: 600; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px; }
+.titan-helper .battle-row {padding:6px;display: grid;grid-template-columns: 1fr 30px 1fr;align-items: center;gap: 16px;border-bottom: 1px solid #eee;justify-items: center;}
+.titan-helper .vs { font-size: 1.2rem; font-weight: bold; color: #6c757d; }
+.titan-helper .player-name {font-weight:500;}
+.titan-helper .player-power { font-size: 0.8rem; color: #6c757d; }
+.titan-helper .titan-badge { display: inline-block; padding: 2px 8px; border-radius: 15px; font-size: 0.7rem; color: white; }
+.titan-helper .recommend-block { background: #f8f9fa; border-radius: 10px;}
+.titan-helper .recommend-player { background: #d4edda; border-radius: 8px; padding: 10px; border-left: 4px solid #28a745; }
+.titan-helper .badge-spec { font-size: 0.7rem; padding: 2px 6px; border-radius: 10px; background: #cce5ff; color: #004085; }
+.titan-helper .percent-control { display: flex; align-items: center; gap: 10px; background: #f1f1f1; padding: 10px 15px; border-radius: 10px; margin-bottom: 20px; flex-wrap: wrap; }
+.titan-helper .percent-control label { font-weight: 600; margin: 0; }
+.titan-helper .percent-value { font-weight: 700; color: #28a745; min-width: 45px; }
+.titan-helper input[type="range"] { width: 200px; }
+.titan-helper .enemy {display: flex;align-items: center;flex-wrap: nowrap;gap: 10px;width: 100%;justify-content: flex-end;}
+.titan-helper .our {display: flex;align-items: center;flex-wrap: nowrap;gap: 10px;width: 100%;justify-content: flex-start;}
+.titan-helper .assigned-info {background: #f0f0f0;border-radius: 8px;padding: 8px 12px;}
+.titan-helper .assigned-player {display: flex;justify-content: space-between;align-items: center;flex-wrap: wrap;gap: 10px;}
+.titan-helper .completed-badge {background: #28a745;color: white;padding: 4px 12px;border-radius: 20px;font-size: 0.75rem;font-weight: 600;}
+.titan-helper .pending-badge {background: #ffc107;color: #333;padding: 4px 12px;border-radius: 20px;font-size: 0.75rem;font-weight: 600;}
+.titan-helper .result-win {background: #28a745;}
+.titan-helper .result-loss {background: #dc3545;}
+.titan-helper .result-skip {background: #6c757d;}
+.titan-helper .vs-win{background:#28a745;color:#fff;border-radius:50%;width:30px;height:30px;display:flex;align-items:center;justify-content:center;}
+.titan-helper .vs-loss{background:#dc3545;color:#fff;border-radius:50%;width:30px;height:30px;display:flex;align-items:center;justify-content:center;}
+.titan-helper .vs-skip{background:#6c757d;color:#fff;border-radius:50%;width:30px;height:30px;display:flex;align-items:center;justify-content:center;}
+.titan-helper .battle-row:nth-child(even){background:#f8f9fa;}
+.titan-helper .battle-row:nth-child(odd){background:#fff;}
+
+@media (max-width: 767px) {
+	.titan-helper .battle-row {grid-template-columns: 1fr;gap: 4px;}
+	.titan-helper .enemy, .titan-helper .our {justify-content: center;}
+	
+}
+
+
+/************************
+Page: stats.php
+************************/
+
+.stats-container .stats-container{max-width:1600px;margin:0 auto}
+.stats-container .stats-tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:24px;border-bottom:2px solid #e0e0e0;padding-bottom:8px}
+.stats-container .tab-btn{background:none;border:none;padding:8px 24px;font-size:1rem;font-weight:500;color:#666;cursor:pointer;border-radius:30px;transition:all .2s}
+.stats-container .tab-btn:hover{background:#f0f0f0}
+.stats-container .tab-btn.active{background:#1a1a2e;color:#fff}
+.stats-container .tab-content{display:none}
+.stats-container .tab-content.active{display:block}
+.stats-container .stats-card{background:#fff;border-radius:16px;box-shadow:0 2px 12px #00000014;overflow:hidden;margin-bottom:24px}
+.stats-container .card-header-stats{background:linear-gradient(135deg,#1a1a2e 0%,#16213e 100%);color:#fff;padding:16px 20px;display:flex;align-items:center;gap:12px}
+.stats-container .card-header-stats i{font-size:1.4rem}
+.stats-container .card-header-stats h3{margin:0;font-size:1.1rem;font-weight:600}
+.stats-container .card-body-stats{padding:20px;overflow-x:auto}
+.stats-container .stats-table{width:100%;border-collapse:collapse;font-size:.85rem}
+.stats-container .stats-table th{text-align:left;padding:12px 8px;background:#f8f9fa;border-bottom:2px solid #e0e0e0;font-weight:600}
+.stats-container .stats-table td{padding:10px 8px;border-bottom:1px solid #f0f0f0;vertical-align:middle}
+.stats-container .stats-table tr:hover{background:#f8f9fa}
+.stats-container .sortable{cursor:pointer;user-select:none}
+.stats-container .sortable:hover{background:#e9ecef}
+.stats-container .sortable i{margin-left:5px;opacity:.5}
+.stats-container .sortable.active i{opacity:1}
+.stats-container .win-rate-high{background:#28a745;color:#fff;padding:2px 8px;border-radius:20px;font-size:.75rem;display:inline-block}
+.stats-container .win-rate-mid{background:#ffc107;color:#333;padding:2px 8px;border-radius:20px;font-size:.75rem;display:inline-block}
+.stats-container .win-rate-low{background:#dc3545;color:#fff;padding:2px 8px;border-radius:20px;font-size:.75rem;display:inline-block}
+.stats-container .trend-up{color:#28a745;font-weight:600}
+.stats-container .combo-heroes{display:flex;flex-wrap:wrap;gap:4px;align-items:center}
+.stats-container .hero-mini{width:32px;height:32px;object-fit:cover;border-radius:6px;background:#e9ecef}
+.stats-container .titan-color{display:inline-block;width:14px;height:14px;border-radius:50%;margin-right:6px;vertical-align:middle}
+.stats-container .chart-icon{cursor:pointer;font-size:1.3rem;color:#4a90e2;transition:transform .2s}
+.stats-container .chart-icon:hover{transform:scale(1.1);color:#ffc107}
+.stats-container .modal-chart{width:90%;max-width:700px}
+.stats-container .chart-container{position:relative;height:400px;margin:20px 0}
+.stats-container .weekly-stats{margin-top:20px;font-size:.85rem;color:#666}
+.stats-container .weekly-stats span{display:inline-block;margin-right:15px;margin-bottom:5px}
+
+@media (max-width: 768px) {
+.stats-container .card-body-stats{padding:12px}
+.stats-container .stats-table{font-size:.7rem}
+.stats-container .hero-mini{width:24px;height:24px}
+.stats-container .tab-btn{padding:6px 16px;font-size:.85rem}
+.stats-container .chart-container{height:280px}
+}
+.stats-container .loading-placeholder{text-align:center;padding:40px;color:#999}
+.stats-container .empty-placeholder{text-align:center;padding:30px;color:#999}
+
+
+
+/************************
+Форма выбора героев
+************************/
+.hero-checkbox-list{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:10px;max-height:60vh;overflow-y:auto}
+.hero-checkbox-item{display:flex;align-items:center;gap:8px;padding:8px;border:1px solid #ddd;border-radius:8px;cursor:pointer;background:#fff;transition:all .2s ease}
+.hero-checkbox-item:hover{border-color:#0d6efd;}
+.hero-checkbox-item.selected-hero{background:#d4edda;border-color:#28a745}
+.hero-checkbox-item img{width:48px;height:48px;object-fit:cover;border-radius:8px}
+.hero-checkbox-item input[type="checkbox"]{width:18px;height:18px;cursor:pointer}
+.hero-name{font-weight:600}
+.hero-stats{font-size:.7rem;color:#666;display:flex;align-items:center;gap:5px;flex-wrap:wrap}
+.hero-stars i{font-size:.7rem}
+.hero-stars .fa-star,.hero-stars .fa-star-half-alt{color:#ffc107}
+.hero-stars .far.fa-star{color:#ffc107}

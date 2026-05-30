@@ -1,0 +1,310 @@
+/* css/pages/battle-view.css */
+.page-battle-view .empty-row {
+    background: #f8f9fa !important;
+    opacity: 0.7;
+}
+
+.page-battle-view .battle-view-container {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.page-battle-view .battle-header {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    color: white;
+    border-radius: 12px;
+    padding: 15px 20px;
+    margin-bottom: 25px;
+}
+
+.page-battle-view .score-badge {
+    font-size: 1.3rem;
+    font-weight: 700;
+    background: rgba(255, 255, 255, 0.15);
+    padding: 5px 18px;
+    border-radius: 50px;
+}
+
+.page-battle-view .building-card {
+    background: white;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.page-battle-view .building-header {
+    background: #c8d4d8;
+    padding: 8px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #e0e0e0;
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+.page-battle-view .battle-row {
+    display: flex;
+    align-items: flex-start;
+    padding: 7px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.page-battle-view .battle-row:nth-child(even) {
+    background-color: #ededed;
+}
+
+.page-battle-view .battle-row:nth-child(odd) {
+    background-color: #ffffff;
+}
+
+.page-battle-view .battle-row:last-child {
+    border-bottom: none;
+}
+
+.page-battle-view .col-left {
+    flex: 1;
+    text-align: right;
+    padding-right: 15px;
+}
+
+.page-battle-view .col-center {
+    width: 120px;
+    text-align: center;
+    flex-shrink: 0;
+}
+
+.page-battle-view .col-right {
+    flex: 1;
+    padding-left: 15px;
+}
+
+.page-battle-view .battle-info-left {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+.page-battle-view .battle-info-right {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.page-battle-view .player-group-left,
+.page-battle-view .player-group-right {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.page-battle-view .player-group-left {
+    justify-content: flex-end;
+}
+
+.page-battle-view .player-group-right {
+    justify-content: flex-start;
+}
+
+.page-battle-view .titan-badge {
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: white;
+    white-space: nowrap;
+}
+
+.page-battle-view .player-name {
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.page-battle-view .player-name-left {
+    color: #dc3545;
+}
+
+.page-battle-view .player-name-right {
+    color: #0d6efd;
+}
+
+.page-battle-view .player-power {
+    font-size: 0.95rem;
+    color: #6c757d;
+    white-space: nowrap;
+}
+
+.page-battle-view .heroes-list-left,
+.page-battle-view .heroes-list-right {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin-top: 8px;
+}
+
+.page-battle-view .heroes-list-left {
+    justify-content: flex-end;
+}
+
+.page-battle-view .heroes-list-right {
+    justify-content: flex-start;
+}
+
+.page-battle-view .hero-icon {
+    width: 32px;
+    height: 32px;
+    object-fit: cover;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.page-battle-view .hero-icon:hover {
+    transform: scale(1.1);
+}
+
+.page-battle-view .result-badge {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.page-battle-view .result-win {
+    background: #39c95b;
+    color: #155724;
+}
+
+.page-battle-view .result-loss {
+    background: #cd737b;
+    color: #721c24;
+}
+
+.page-battle-view .result-skip {
+    background: #91ade3;
+    color: #383d41;
+}
+
+.page-battle-view .comment-icon {
+    cursor: pointer;
+    color: #6c757d;
+    font-size: 0.8rem;
+    margin-left: 6px;
+    transition: color 0.2s;
+}
+
+.page-battle-view .comment-icon:hover {
+    color: #0d6efd;
+}
+
+.page-battle-view .comment-popup {
+    display: none;
+    position: fixed;
+    background: #2d2d2d;
+    color: white;
+    border-radius: 8px;
+    padding: 10px 15px;
+    max-width: 300px;
+    font-size: 0.85rem;
+    z-index: 1000;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    word-wrap: break-word;
+}
+
+.page-battle-view .comment-popup::after {
+    content: '';
+    position: absolute;
+    top: -8px;
+    left: 50%;
+    transform: translateX(-50%) rotate(180deg);
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-top: 8px solid #2d2d2d;
+}
+
+.page-battle-view .comment-popup.active {
+    display: block;
+}
+
+/* Мобильная версия */
+@media (max-width: 767px) {
+    .page-battle-view .battle-row {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .page-battle-view .score-badge {
+        width: 100%;
+        text-align: center;
+    }
+
+    .page-battle-view .col-left {
+        text-align: center;
+    }
+
+    .page-battle-view .col-center {
+        padding: 6px 0;
+        width: auto;
+    }
+
+    .page-battle-view .col-right {
+        padding-left: 0;
+        text-align: center;
+    }
+
+    .page-battle-view .result {
+        display: none;
+    }
+
+    .page-battle-view .battle-row.titan {
+        display: grid;
+        grid-template-columns: 1fr 35px 1fr;
+    }
+
+    .page-battle-view .titan .col-right span:first-child {
+        order: 3;
+    }
+
+    .page-battle-view .titan .col-left {
+        text-align: center;
+        padding-right: 0;
+        padding-bottom: 0;
+        border-bottom: none;
+    }
+
+    .page-battle-view .titan .col-right {
+        padding-top: 0;
+    }
+
+    .page-battle-view .titan .player-group-left,
+    .page-battle-view .titan .player-group-right {
+        flex-direction: column;
+        font-size: small;
+    }
+
+    .page-battle-view .battle-info-left,
+    .page-battle-view .battle-info-right {
+        justify-content: center;
+    }
+
+    .page-battle-view .player-group-left,
+    .page-battle-view .player-group-right {
+        justify-content: center;
+    }
+
+    .page-battle-view .heroes-list-left,
+    .page-battle-view .heroes-list-right {
+        justify-content: center;
+        gap: 2px;
+        margin-top: 0;
+    }
+}

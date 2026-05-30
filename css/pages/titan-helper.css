@@ -1,0 +1,222 @@
+/* css/pages/titan-helper.css */
+.page-titan-helper .battle-info {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    color: white;
+    border-radius: 16px;
+    padding: 20px;
+    margin-bottom: 24px;
+}
+
+.page-titan-helper .building-card {
+    background: white;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.page-titan-helper .building-header {
+    background: #c8d4d8;
+    padding: 12px 16px;
+    font-weight: 600;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.page-titan-helper .battle-row {
+    padding: 6px;
+    display: grid;
+    grid-template-columns: 1fr 30px 1fr;
+    align-items: center;
+    gap: 16px;
+    border-bottom: 1px solid #eee;
+    justify-items: center;
+}
+
+.page-titan-helper .vs {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #6c757d;
+}
+
+.page-titan-helper .player-name {
+    font-weight: 500;
+}
+
+.page-titan-helper .player-power {
+    font-size: 0.8rem;
+    color: #6c757d;
+}
+
+.page-titan-helper .titan-badge {
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 15px;
+    font-size: 0.7rem;
+    color: white;
+}
+
+.page-titan-helper .recommend-block {
+    background: #f8f9fa;
+    border-radius: 10px;
+}
+
+.page-titan-helper .recommend-player {
+    background: #d4edda;
+    border-radius: 8px;
+    padding: 10px;
+    border-left: 4px solid #28a745;
+}
+
+.page-titan-helper .badge-spec {
+    font-size: 0.7rem;
+    padding: 2px 6px;
+    border-radius: 10px;
+    background: #cce5ff;
+    color: #004085;
+}
+
+.page-titan-helper .percent-control {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: #f1f1f1;
+    padding: 10px 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.page-titan-helper .percent-control label {
+    font-weight: 600;
+    margin: 0;
+}
+
+.page-titan-helper .percent-value {
+    font-weight: 700;
+    color: #28a745;
+    min-width: 45px;
+}
+
+.page-titan-helper input[type="range"] {
+    width: 200px;
+}
+
+.page-titan-helper .enemy {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 10px;
+    width: 100%;
+    justify-content: flex-end;
+}
+
+.page-titan-helper .our {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 10px;
+    width: 100%;
+    justify-content: flex-start;
+}
+
+.page-titan-helper .assigned-info {
+    background: #f0f0f0;
+    border-radius: 8px;
+    padding: 8px 12px;
+}
+
+.page-titan-helper .assigned-player {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.page-titan-helper .completed-badge {
+    background: #28a745;
+    color: white;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.page-titan-helper .pending-badge {
+    background: #ffc107;
+    color: #333;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.page-titan-helper .result-win {
+    background: #28a745;
+}
+
+.page-titan-helper .result-loss {
+    background: #dc3545;
+}
+
+.page-titan-helper .result-skip {
+    background: #6c757d;
+}
+
+.page-titan-helper .vs-win {
+    background: #28a745;
+    color: #fff;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.page-titan-helper .vs-loss {
+    background: #dc3545;
+    color: #fff;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.page-titan-helper .vs-skip {
+    background: #6c757d;
+    color: #fff;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.page-titan-helper .battle-row:nth-child(even) {
+    background: #f8f9fa;
+}
+
+.page-titan-helper .battle-row:nth-child(odd) {
+    background: #fff;
+}
+
+/* Мобильная версия */
+@media (max-width: 767px) {
+    .page-titan-helper .battle-row {
+        grid-template-columns: 1fr;
+        gap: 4px;
+    }
+
+    .page-titan-helper .enemy,
+    .page-titan-helper .our {
+        justify-content: center;
+    }
+}

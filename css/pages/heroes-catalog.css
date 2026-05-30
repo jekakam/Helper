@@ -1,0 +1,45 @@
+/* css/pages/heroes-catalog.css */
+.page-heroes-catalog .popularity-badge {
+    font-size: 0.8rem;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.page-heroes-catalog .star-rating {
+    display: inline-flex;
+    gap: 1px;
+    margin-left: 5px;
+}
+
+.page-heroes-catalog .star-filled {
+    color: #ffc107;
+}
+
+.page-heroes-catalog .star-empty {
+    color: #dee2e6;
+}
+
+.page-heroes-catalog .hero-popularity {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.page-heroes-catalog .hero-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 8px;
+    object-fit: cover;
+    background-color: #6c757d;
+}
+
+.page-heroes-catalog .hero-preview {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+}

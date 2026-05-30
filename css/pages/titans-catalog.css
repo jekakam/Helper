@@ -1,0 +1,9 @@
+/* css/pages/titans-catalog.css */
+.page-titans-catalog .card {
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.page-titans-catalog .card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}

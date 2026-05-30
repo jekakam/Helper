@@ -1,0 +1,10 @@
+/* css/pages/login.css */
+.page-login .card {
+    border: none;
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.page-login .card-header {
+    border: none;
+}

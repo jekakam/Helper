@@ -1,0 +1,32 @@
+/* css/pages/players.css */
+.page-players .status-badge {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 500;
+}
+
+.page-players .status-active {
+    background: #d4edda;
+    color: #155724;
+}
+
+.page-players .status-inactive {
+    background: #f8d7da;
+    color: #721c24;
+}
+
+.page-players .limit-warning {
+    background: #fff3cd;
+    border: 1px solid #ffecb5;
+    border-radius: 8px;
+    padding: 10px 15px;
+    margin-bottom: 15px;
+    font-size: 0.85rem;
+}
+
+.page-players .limit-warning i {
+    color: #ffc107;
+    margin-right: 8px;
+}

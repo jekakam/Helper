@@ -1,0 +1,340 @@
+/* css/pages/counter-search.css */
+.page-counter-search .counter-container {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.page-counter-search .presets-section {
+    background: #f8f9fa;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.page-counter-search .presets-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 15px;
+}
+
+.page-counter-search .preset-card {
+    background: white;
+    border: 2px solid #e0e0e0;
+    border-radius: 12px;
+    padding: 12px;
+    cursor: pointer;
+    transition: all 0.2s;
+    min-width: 250px;
+    flex: 1;
+}
+
+.page-counter-search .preset-card:hover {
+    border-color: #0d6efd;
+    box-shadow: 0 4px 12px rgba(13, 110, 253, 0.15);
+    transform: translateY(-2px);
+}
+
+.page-counter-search .preset-card .preset-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.page-counter-search .preset-card .preset-nick {
+    font-weight: 600;
+    color: #dc3545;
+    font-size: 0.95rem;
+}
+
+.page-counter-search .preset-card .preset-power {
+    font-size: 0.85rem;
+    color: #6c757d;
+}
+
+.page-counter-search .preset-card .preset-heroes {
+    display: flex;
+    gap: 4px;
+    margin-bottom: 8px;
+}
+
+.page-counter-search .preset-card .preset-heroes img {
+    width: 36px;
+    height: 36px;
+    object-fit: cover;
+    border-radius: 6px;
+    border: 1px solid #e0e0e0;
+}
+
+.page-counter-search .preset-card .preset-status {
+    font-size: 0.8rem;
+    color: #6c757d;
+}
+
+.page-counter-search .search-card {
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+    margin-bottom: 24px;
+    overflow: hidden;
+}
+
+.page-counter-search .search-header {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    color: white;
+    padding: 16px 20px;
+}
+
+.page-counter-search .search-body {
+    padding: 20px;
+}
+
+.page-counter-search .enemy-heroes-section {
+    background: #f8f9fa;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.page-counter-search .enemy-heroes-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.page-counter-search .enemy-hero-slot {
+    width: 100px;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.page-counter-search .enemy-hero-slot:hover {
+    transform: scale(1.05);
+}
+
+.page-counter-search .enemy-hero-slot.selected .hero-card {
+    border: 3px solid #28a745;
+    background: #d4edda;
+}
+
+.page-counter-search .hero-card {
+    background: white;
+    border-radius: 12px;
+    padding: 10px;
+    border: 2px solid #e0e0e0;
+    transition: all 0.2s;
+}
+
+.page-counter-search .hero-card img {
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 8px;
+}
+
+.page-counter-search .hero-card .hero-name {
+    font-size: 0.75rem;
+    font-weight: 500;
+    text-align: center;
+    word-break: break-word;
+}
+
+.page-counter-search .remove-hero {
+    margin-top: 5px;
+    font-size: 0.7rem;
+    color: #dc3545;
+    cursor: pointer;
+}
+
+.page-counter-search .search-btn {
+    background: linear-gradient(135deg, #28a745 0%, #1e7e34 100%);
+    border: none;
+    padding: 12px 30px;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.page-counter-search .results-card {
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+}
+
+.page-counter-search .results-header {
+    background: #343a40;
+    color: white;
+    padding: 12px 20px;
+}
+
+.page-counter-search .results-count {
+    font-size: 0.9rem;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 4px 12px;
+    border-radius: 20px;
+}
+
+.page-counter-search .results-grid {
+    display: grid;
+    grid-template-columns: 140px 1fr 120px 70px 70px 85px 110px;
+    gap: 1px;
+    background: #e0e0e0;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    overflow: hidden;
+    font-size: 0.85rem;
+}
+
+.page-counter-search .grid-header {
+    background: #343a40;
+    color: white;
+    padding: 10px 8px;
+    font-weight: 600;
+    font-size: 0.8rem;
+    display: flex;
+    align-items: center;
+}
+
+.page-counter-search .grid-cell {
+    background: white;
+    padding: 10px 8px;
+    display: flex;
+    align-items: center;
+}
+
+.page-counter-search .grid-cell.player-cell {
+    background: #f8f9fa;
+    font-weight: 500;
+}
+
+.page-counter-search .grid-cell.alternate {
+    background: #fafbfc;
+}
+
+.page-counter-search .player-rank {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    line-height: 24px;
+    text-align: center;
+    background: #0d6efd;
+    color: white;
+    border-radius: 50%;
+    font-size: 0.75rem;
+    font-weight: 700;
+    margin-right: 8px;
+    flex-shrink: 0;
+}
+
+.page-counter-search .combo-badge {
+    display: inline-block;
+    background: #e9ecef;
+    color: #495057;
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-size: 0.7rem;
+    font-weight: 600;
+    margin-left: 4px;
+}
+
+.page-counter-search .hero-combo-grid {
+    display: flex;
+    gap: 4px;
+    flex-wrap: wrap;
+}
+
+.page-counter-search .hero-combo-grid img {
+    width: 32px;
+    height: 32px;
+    object-fit: cover;
+    border-radius: 6px;
+    border: 1px solid #e0e0e0;
+}
+
+.page-counter-search .win-badge {
+    display: inline-block;
+    background: #ffc107;
+    color: #000;
+    padding: 1px 6px;
+    border-radius: 8px;
+    font-size: 0.7rem;
+    font-weight: 700;
+    margin-right: 4px;
+}
+
+.page-counter-search .empty-state {
+    text-align: center;
+    padding: 60px 20px;
+    color: #6c757d;
+}
+
+.page-counter-search .empty-state i {
+    font-size: 48px;
+    margin-bottom: 16px;
+    opacity: 0.5;
+}
+
+/* Адаптив */
+@media (max-width: 900px) {
+    .page-counter-search .results-grid {
+        grid-template-columns: 110px 1fr 90px 60px 60px 70px 90px;
+        font-size: 0.75rem;
+    }
+
+    .page-counter-search .hero-combo-grid img {
+        width: 26px;
+        height: 26px;
+    }
+}
+
+@media (max-width: 768px) {
+    .page-counter-search .enemy-hero-slot {
+        width: 100px;
+    }
+
+    .page-counter-search .hero-card img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .page-counter-search .hero-card .hero-name {
+        font-size: 0.65rem;
+    }
+
+    .page-counter-search .presets-grid {
+        flex-direction: column;
+    }
+
+    .page-counter-search .results-grid {
+        grid-template-columns: 1fr;
+        gap: 8px;
+        background: transparent;
+    }
+
+    .page-counter-search .grid-header {
+        display: none;
+    }
+
+    .page-counter-search .grid-cell {
+        border: 1px solid #e0e0e0;
+        border-radius: 8px;
+        margin-bottom: 8px;
+        justify-content: space-between;
+    }
+
+    .page-counter-search .grid-cell:before {
+        content: attr(data-label);
+        font-weight: 600;
+        color: #6c757d;
+        font-size: 0.7rem;
+    }
+
+    .page-counter-search .player-rank {
+        margin-right: 0;
+    }
+}
